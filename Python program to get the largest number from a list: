@@ -1,0 +1,6 @@
+numbers = [5, 12, 7, 25, 3, 18]
+
+# Get the largest number
+largest = max(numbers)
+
+print("The largest number is:", largest)
