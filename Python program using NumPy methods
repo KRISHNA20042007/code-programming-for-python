@@ -1,0 +1,57 @@
+import numpy as np
+
+# Sample array
+arr = np.array([[5, 10, 15],
+                [20, 25, 30],
+                [35, 40, 45]])
+
+print("Array:")
+print(arr)
+
+# a. Extract all numbers less than and greater than a specified number
+specified_num = 25
+
+less_than = arr[arr < specified_num]
+greater_than = arr[arr > specified_num]
+
+print(f"\nNumbers less than {specified_num}: {less_than}")
+print(f"Numbers greater than {specified_num}: {greater_than}")
+
+# b. Find indices of max and min numbers along a given axis
+# Axis 0 = columns, Axis 1 = rows
+
+# Max and min values overall
+max_val = arr.max()
+min_val = arr.min()
+print(f"\nMax value in the array: {max_val}")
+print(f"Min value in the array: {min_val}")
+
+# Indices of max and min values overall (flattened index)
+max_idx = arr.argmax()
+min_idx = arr.argmin()
+print(f"Index of max value (flattened): {max_idx}")
+print(f"Index of min value (flattened): {min_idx}")
+
+# Indices of max and min values along axis 0 (columns)
+max_indices_axis0 = arr.argmax(axis=0)
+min_indices_axis0 = arr.argmin(axis=0)
+print(f"\nIndices of max values along axis 0 (columns): {max_indices_axis0}")
+print(f"Indices of min values along axis 0 (columns): {min_indices_axis0}")
+
+# Indices of max and min values along axis 1 (rows)
+max_indices_axis1 = arr.argmax(axis=1)
+min_indices_axis1 = arr.argmin(axis=1)
+print(f"Indices of max values along axis 1 (rows): {max_indices_axis1}")
+print(f"Indices of min values along axis 1 (rows): {min_indices_axis1}")
+
+# Additional methods demonstration
+
+print(f"\nrepr(arr): {repr(arr)}")
+
+# bincount requires 1D array of non-negative ints
+counts = np.bincount(np.array([0,1,1,3,2,1,0,4,4,4,4]))
+print(f"\nBincount of [0,1,1,3,2,1,0,4,4,4,4]: {counts}")
+
+# unique elements in array
+unique_elements = np.unique(arr)
+print(f"\nU
