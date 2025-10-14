@@ -1,0 +1,34 @@
+# Base class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound.")
+
+# Derived class Dog
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} says: Woof!")
+
+    def fetch(self):
+        print(f"{self.name} is fetching the ball.")
+
+# Derived class Cat
+class Cat(Animal):
+    def speak(self):
+        print(f"{self.name} says: Meow!")
+
+    def climb(self):
+        print(f"{self.name} is climbing the tree.")
+
+# Create objects
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+# Call methods
+dog.speak()    # Inherited and overridden
+dog.fetch()    # Dog-specific behavior
+
+cat.speak()    # Inherited and overridden
+cat.climb()    # Cat-specific behavior
