@@ -10,7 +10,6 @@ marker='o',
 markerfacecolor='yellow',
 linewidth=2)
 # Add titles and labels
-N D Prasanna (6427)
 plt.title("Monthly Sales Report (2025)",
 fontsize=14, color='blue')
 plt.xlabel("Month", fontsize=12)
